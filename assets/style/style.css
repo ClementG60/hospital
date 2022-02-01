@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.containerNav{
+    padding: 10px;
+    height: 100px;
+    background: #58bcf1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.containerNav a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.containerNav a i{
+    margin-right: 10px;
+}
+
+.containerNav ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.containerNav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #58bcf1;
+}
+
+h2{
+    margin: 50px 30px;
+    font-size: 25px;
+    color: #58bcf1;
+}
+
+.containerForm{
+    height: auto;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 50px;
+    justify-content: center;
+    background: #58bcf1;
+    box-shadow: 10px 5px 5px #e6e6e6;
+    display: flex;
+    border-radius: 30px;
+}
+
+.containerForm p{
+    font-size: 18px;
+    color: #fff;
+    margin: 50px 0;
+}
+
+.containerForm p a{
+    color: white;
+}
+
+
+.containerForm form {
+    width: 100%;
+    padding: 10px 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerForm form label:first-child{
+    margin-top: 30px;
+}
+
+.containerForm form label {
+    width: 60%;
+    margin-bottom: 5px;
+}
+
+.containerForm form input {
+    width: 100%;
+    padding: 5px;
+    color: #93D2F5;
+    border-color: transparent;
+}
+
+.containerForm form input:last-child {
+    transform: translateX(50%);
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+.containerForm form p {
+    margin: 15px 0;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
+.containerBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.containerBlock a{
+    text-decoration: none;
+    color: white;
+}
+
+.containerBlock div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    border: solid #58bcf1;
+    border-radius: 5px;
+    background-color: #58bcf1;
+}
+
+.containerBlock div h3{
+    padding: 30px 30px;
+}
+
+.containerBlock div:hover{
+    border: solid #49b1e9;
+    background-color: #49b1e9;
+}
+
+
+.containerInfoPatient div{
+    height: 50px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerInfoPatient div ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    margin: auto;
+    border-bottom: 2px solid #58bcf1;
+}
+
+.containerInfoPatient div ul li{
+    font-size: 16px;
+    width : 25%;
+    text-align: center;
+    color: #818181;
+}
+
+.containerInfoPatient div ul li a{
+    text-decoration: none;
+    color: #58bcf1;
+}
+
+.error{
+    margin: 10px 20px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
+.link{
+    margin : 30px 20px;
+    color:#58BCF1;
+}
+
+.link a {
+    color:#58BCF1;
+}
+
+.containerProfilPatient {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    background-color: #fafafa;
+    border-radius: 10px;
+    color: #58bcf1;
+}
+
+.containerProfilPatient ul {
+    width: 100%;
+    font-size: 22px;
+    list-style: none;
+}
+
+.containerProfilPatient ul li {
+    margin: 40px 20px;
+}
