@@ -20,11 +20,10 @@
         <div class="containerBlock">
                 <a href="ajoutPatient.php"><div>
                     <h3>Ajouter d'un patient</h3>
-                    </a>
-                </div>
+                </div></a>
                 <a href="ajoutRendezVous.php"><div>
-                    <h3>Ajout d'un rendez-vous</h3></a>
-                </div>
+                    <h3>Ajout d'un rendez-vous</h3>
+                </div></a>
         </div>
     </main>
 

@@ -22,13 +22,11 @@ include('controllers/controllerAjoutPatient.php');
             <form action="" method="POST">
                 <?php
                 foreach ($inputArray as $input) { ?>
-                    <div class="mb-3">
-                        <label for="<?= $input['name'] ?>"><?= $input['label'] ?></label>
-                        <input type="<?= $input['type'] ?>" id="<?= $input['name'] ?>" name="<?= $input['name'] ?>" placeholder="<?= $input['placeholder'] ?>">
-                        <p><?= isset($errorList[$input['name']]) ? $errorList[$input['name']] : '' ?></p>
-                    </div>
+                    <label for="<?= $input['name'] ?>"><?= $input['label'] ?></label>
+                    <input type="<?= $input['type'] ?>" id="<?= $input['name'] ?>" name="<?= $input['name'] ?>" placeholder="<?= $input['placeholder'] ?>">
+                    <p><?= isset($errorList[$input['name']]) ? $errorList[$input['name']] : '' ?></p>
                 <?php } ?>
-                <input type="submit" class="btn btn-success" name="addPatient" value="Ajout du patient">
+                <input type="submit" name="addPatient" value="Ajout du patient">
             </form>
         </div>
     </main>

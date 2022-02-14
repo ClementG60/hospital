@@ -8,6 +8,12 @@
             <li>
                 <a href="listePatient.php">Liste des patient</a>
             </li>
+            <li>
+                <a href="ajoutRendezVous.php">Ajouter un rendez-vous</a>
+            </li>
+            <li>
+                <a href="listeRendezVous.php">Liste des rendez-vous</a>
+            </li>
         </ul>
     </div>
 </header>

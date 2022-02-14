@@ -1,5 +1,6 @@
 <?php
 require 'class/Form.php';
+require 'models/Database.php';
 require 'models/Patients.php';
 
 // $firstnameArray = ['filter' => 'name', 'name' => 'firstname', 'realName' => 'un prénom'];
@@ -8,8 +9,8 @@ require 'models/Patients.php';
 // $inputArray = [ $lastnameArray,$firstnameArray, $birthdateArray];
 
 $inputArray = [
-    ['filter' => 'name', 'name' => 'firstname', 'realName' => 'un prénom', 'placeholder' => '', 'label' => 'Prénom', 'type' => 'text'],
     ['filter' => 'name', 'name' => 'lastname', 'realName' => 'un nom de famille', 'placeholder' => '', 'label' => 'Nom de famille', 'type' => 'text'],
+    ['filter' => 'name', 'name' => 'firstname', 'realName' => 'un prénom', 'placeholder' => '', 'label' => 'Prénom', 'type' => 'text'],
     ['filter' => 'date', 'name' => 'birthdate', 'realName' => 'une date de naissance', 'placeholder' => '', 'label' => 'Date de naissance', 'type' => 'date'],
     ['filter' => 'phone', 'name' => 'phone', 'realName' => 'un numéro de téléphone', 'placeholder' => '', 'label' => 'Téléphone', 'type' => 'text'],
     ['filter' => 'email', 'name' => 'mail', 'realName' => 'une adresse de couriel', 'placeholder' => '', 'label' => 'Adresse de courriel', 'type' => 'email'],
@@ -20,7 +21,7 @@ if (isset($_POST['addPatient'])) {
     $formVerif = new Form;
 
     $valueArray = [];
-    foreach ($inputArray  as $input) {
+    foreach ($inputArray as $input) {
         if ($formVerif->checkPost($input)) {
             $valueArray[$input['name']] = $_POST[$input['name']];
         } else {
@@ -39,7 +40,7 @@ if (isset($_POST['addPatient'])) {
             $patient->addPatient();
             header('location: index.php');
             exit;
-        }else{
+        } else {
             $errorList['addPatient'] = 'Ce patient existe déjà dans la base de donnée. Si vous souhaitez modifier ses informations, allez directement sur la page du patient concerné.';
         }
     }

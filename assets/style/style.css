@@ -75,26 +75,22 @@ h2{
     color: white;
 }
 
-
 .containerForm form {
     width: 100%;
-    padding: 10px 30px;
+    padding: 5px 30px;
     color: #fff;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
-.containerForm form label:first-child{
-    margin-top: 30px;
-}
-
-.containerForm form label {
-    width: 60%;
-    margin-bottom: 5px;
+.containerForm form label{
+    margin-bottom: 10px;
 }
 
 .containerForm form input {
     width: 100%;
+    margin-bottom: 20px;
     padding: 5px;
     color: #93D2F5;
     border-color: transparent;
@@ -105,7 +101,7 @@ h2{
     width: 50%;
     padding: 10px;
     border-radius: 5px;
-    margin: 30px 0;
+    margin: 20px 0;
     font-size: 18px;
 }
 
@@ -114,6 +110,14 @@ h2{
     font-size: 12px;
     font-style: italic;
     color: red;
+}
+
+.containerForm select {
+    width: 50%;
+    margin-bottom: 20px;
+    color: #58bcf1;
+    padding: 5px;
+    border: none;
 }
 
 .containerBlock{
@@ -148,7 +152,7 @@ h2{
 }
 
 
-.containerInfoPatient div{
+.containerInfo div{
     height: 50px;
     width: 90%;
     margin: auto;
@@ -158,24 +162,34 @@ h2{
     justify-content: center;
 }
 
-.containerInfoPatient div ul{
+.containerInfo div ul{
     width: 100%;
     display: flex;
     list-style: none;
+    justify-content: space-around;
     margin: auto;
     border-bottom: 2px solid #58bcf1;
 }
 
-.containerInfoPatient div ul li{
+.containerInfo div ul li{
     font-size: 16px;
     width : 25%;
     text-align: center;
     color: #818181;
 }
 
-.containerInfoPatient div ul li a{
+.containerInfo div ul li a{
     text-decoration: none;
     color: #58bcf1;
+}
+
+.containerInfo div ul li form input{
+    border: none;
+    color: #49b1e9;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .error{
@@ -198,10 +212,22 @@ h2{
     width: 40%;
     text-align: center;
     display: flex;
+    flex-direction: column;
     margin: auto;
-    background-color: #fafafa;
-    border-radius: 10px;
-    color: #58bcf1;
+    background: #58bcf1;
+    box-shadow: 10px 5px 5px #e6e6e6;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.infoAppointment {
+    width: 100%;
+    font-size: 22px;
+}
+
+.infoAppointment p {
+    margin: 30px 0;
 }
 
 .containerProfilPatient ul {
@@ -213,3 +239,127 @@ h2{
 .containerProfilPatient ul li {
     margin: 40px 20px;
 }
+
+.display{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.buttonEdit{
+    text-align: end;
+}
+
+.buttonClose{
+    text-align: end;
+}
+
+#edit{
+    font-size: 35px;
+    margin: 10px 20px;
+}
+
+#close{
+    font-size: 35px;
+    margin: 10px 20px;
+}
+
+.formUpdatePatient {
+    width: 100%;
+    padding: 10px 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.formUpdatePatient label {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+.formUpdatePatient input {
+    width: 100%;
+    padding: 5px;
+    color: #93D2F5;
+    border-color: transparent;
+    margin-bottom: 20px;
+}
+
+.formUpdatePatient input:last-child {
+    transform: translateX(50%);
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 30px 0;
+    font-size: 18px;
+}
+
+.containerProfilPatient .containerFormUpdate form p {
+    margin: 15px 0;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
+input:disabled{
+    background: #fff;
+}
+
+.searchBar{
+    display: flex;
+    width: 80%;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.searchBar form{
+    width: 80%;
+}
+
+.searchBar form input {
+    width: 40%;
+    border: none;
+    border-radius: 10px;
+    background: #e9e9e9;
+    color: #49b1e9;
+    padding: 10px 20px;
+}
+nav{
+    margin-top: 40px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    border-radius: 5px;
+    border: solid 2px #49b1e9;
+    margin-right: 10px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    padding: 40px;
+    color: #49b1e9;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.disabled a {
+    pointer-events: none;
+}  
