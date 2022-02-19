@@ -26,9 +26,9 @@ include('controllers/controllerAddAppointments.php');
                 <label for="">Patient</label>
                 <select name="idPatient" id="idPatient">
                     <option value="" disabled selected></option>
-                <?php foreach($patientList as $patient) {?>
-                    <option value="<?= $patient->id ?>"><?= $patient->lastname ?>  <?= $patient->firstname ?></option>
-                <?php } ?>
+                    <?php foreach ($patientList as $patient) { ?>
+                        <option value="<?= $patient->id ?>"><?= $patient->lastname ?> <?= $patient->firstname ?></option>
+                    <?php } ?>
                 </select>
                 <p><?= isset($errorList['idPatient']) ? $errorList['idPatient'] : '' ?></p>
                 <input type="submit" name="addAppointment" value="Ajout d'un rendez-vous">

@@ -1,7 +1,5 @@
 <?php
 include 'controllers/controllerListPatient.php';
-var_dump($currentPage);
-var_dump($pages);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -47,12 +45,9 @@ var_dump($pages);
                 <li class="<?= $currentPage == 1 ? 'disabled' : '' ?>">
                     <a href="listePatient.php?page=<?= $currentPage - 1 ?>"><i class="bi bi-arrow-left"></i></a>
                 </li>
-
-                <?php for ($page = 1; $page < $pages; $page++) { ?>
-                    <li <?= $currentPage == $page ? 'active' : '' ?>>
+                    <li>
                         <a href="listePatient.php?page=<?= $currentPage ?>"><?= $currentPage ?></a>
                     </li>
-                <?php } ?>
                 <li class="<?= ($currentPage == $pages) ? 'disabled' : '' ?>">
                     <a href="listePatient.php?page=<?= $currentPage + 1 ?>"><i class="bi bi-arrow-right"></i></a>
                 </li>

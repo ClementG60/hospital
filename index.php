@@ -24,6 +24,9 @@
                 <a href="ajoutRendezVous.php"><div>
                     <h3>Ajout d'un rendez-vous</h3>
                 </div></a>
+                <a href="ajoutPatientRendezVous.php"><div>
+                    <h3>Ajout d'un patient et d'un rendez-vous</h3>
+                </div></a>
         </div>
     </main>
 

@@ -26,6 +26,13 @@ class Patients extends Database
         $queryStatement->bindValue(':mail', $this->mail, PDO::PARAM_STR);
         return $queryStatement->execute();
     }
+
+    public function lastIdPatient()
+    {
+        $query = 'SELECT LAST_INSERT_ID() AS `lastIdPatient`;';
+        $queryStatement = $this->db->query($query);
+        return $queryStatement->fetch(PDO::FETCH_OBJ);
+    }
     /**
      * Permet de savoir si un patient est unique
      *
@@ -50,6 +57,13 @@ class Patients extends Database
             $check = true;
         }
         return $check;
+    }
+
+    public function getPatientList(): array
+    {
+        $query = 'SELECT `id`,`lastname`, `firstname`, DATE_FORMAT(`birthdate`, \'%d/%m/%Y\') AS `birthdate` FROM ' . $this->table;
+        $queryStatement = $this->db->query($query);
+        return $queryStatement->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function getPatientListSearch(?string $search = null): array
@@ -103,7 +117,7 @@ class Patients extends Database
         $query =
         'SELECT DATE_FORMAT(`appointments`.`dateHour`, \'%d/%m/%Y à %H:%i\' ) AS `dateHour`
         FROM `appointments`
-            INNER JOIN `patients` ON `appointments`.`idPatients` = `patients`.`id` WHERE `appointments`.`idPatients` = :id ORDER BY `dateHour` ASC';
+         WHERE `appointments`.`idPatients` = :id ORDER BY `dateHour` ASC';
         $queryStatement = $this->db->prepare($query);
         $queryStatement->bindValue(':id', $this->id, PDO::PARAM_INT);
         $queryStatement->execute();

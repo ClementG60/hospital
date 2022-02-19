@@ -9,17 +9,23 @@ if (isset($_POST['search'])) {
     include '../models/Patients.php';
     $patient = new Patients;
     echo json_encode($patient->getPatientListSearch($_POST['search']));
+    $patientCount = (int) $patient->countPatient()->numberPatient;
+    $patientPerPage = 5;
+    $pages = (int) ceil($patientCount / $patientPerPage);
+    $premier = ($currentPage * $patientPerPage) - $patientPerPage;
+    $patient->setPatientPerPage($patientPerPage);
+    $patient->setFirstPatient($premier);
+    $patientList = $patient->pagination();
 } else {
     include 'models/Database.php';
     include 'models/Patients.php';
     $patient = new Patients;
     $patientCount = (int) $patient->countPatient()->numberPatient;
-    $patientPerPage = 2;
+    $patientPerPage = 5;
     $pages = (int) ceil($patientCount / $patientPerPage);
     $premier = ($currentPage * $patientPerPage) - $patientPerPage;
     $patient->setPatientPerPage($patientPerPage);
     $patient->setFirstPatient($premier);
-
     $patientList = $patient->pagination();
 }
 
